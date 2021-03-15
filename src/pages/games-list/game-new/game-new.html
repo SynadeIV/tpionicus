@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Création d'un jeu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Affiche</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gamePicture"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Titre</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gameName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Pays</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gameCreator"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gameRelease"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Réalisateur</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gamePlatform"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Producteur</ion-label>
+    <ion-input type="text" [(ngModel)]="game.gamePrice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Au cinéma ?</ion-label>
+    <ion-toggle [(ngModel)]="game.gameIsFav"></ion-toggle>
+  </ion-item>
+  <br>
+  <div class="text-center">
+    <button ion-button (click)="onAdd()">Enregistrer</button>
+  </div>
+</ion-content>

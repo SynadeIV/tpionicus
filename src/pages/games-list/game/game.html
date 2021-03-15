@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="onGoAccessModif()">Rendre Modifiable</button>
+  <!-- <div *ngIf="!modif">
+    J'affiche le détail
+  </div>
+  <div *ngIf="modif">
+    Je peux modifier
+  </div> -->
+
+  <div *ngIf="modif; then content else otherContent"></div>
+  <ng-template #content>
+    <ion-item>
+      <ion-label>Affiche</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gamePicture"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gameName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Créateur</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gameCreator"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date de sortie</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gameRelease"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plateforme</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gamePlatform"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix</ion-label>
+      <ion-input type="text" [(ngModel)]="game.data.gamePrice"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Favoris?</ion-label>
+      <ion-toggle [(ngModel)]="game.data.gameIsFav"></ion-toggle>
+    </ion-item>
+    <br>
+    <div class="text-center">
+      <button ion-button (click)="onModif()">Modifier</button>
+    </div>
+  </ng-template>
+  <ng-template #otherContent>
+    <ion-grid *ngIf="game">
+      <ion-row>
+        <ion-col col-6>
+          <strong>Favoris:</strong>
+          <ion-icon *ngIf="game.data.gameIsFav" name="checkmark"></ion-icon>
+          <ion-icon *ngIf="!game.data.gameIsFav" name="close-circle"></ion-icon>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button (click)="onDelete()">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <img [src]="game.data.gamePicture" [alt]="game.data.gameName">
+        </ion-col>
+        <ion-col col-6>
+          <strong>Nom :</strong> <br>
+          {{game.data.gameName}} <br>
+          <strong>Créateur :</strong><br>
+          {{game.data.gameCreator}} <br>
+          <strong>Date de sortie :</strong> <br>
+          {{game.data.gameRelease}} <br>
+          <strong>Plateforme :</strong> <br>
+          {{game.data.gamePlatform}} <br>
+          <strong>Prix :</strong> <br>
+          {{game.data.gamePrice}} <br>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ma liste de jeux</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Creation d'un nouveau jeu</h2>
+  <button ion-button (click)="onGoToCreate()">Création</button>
+
+  <h2>La liste des jeux</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 *ngFor="let game of games"> <!-- ou size="4"-->
+        <ion-list (click)="onGoToGame(game.data.gameName, game.id)">
+          <ion-item>
+            <img [src]="game.data.gamePicture" [alt]="game.data.gameName">
+          </ion-item>
+          <ion-item>
+            {{game.data.gameName}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  Pas marrant
+</ion-footer>

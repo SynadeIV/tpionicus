@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
 import { GamesListPage } from '../games-list/games-list';
+import { PhotoPage } from '../photo/photo';
 /**
  * Generated class for the TabPage page.
  *
@@ -20,6 +21,7 @@ export class TabPage {
   home = HomePage;
   games = GamesListPage;
   about = AboutPage;
+  photo = PhotoPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

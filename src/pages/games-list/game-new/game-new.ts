@@ -19,11 +19,11 @@ export class GameNewPage {
   public game: any = {
     gamePicture: null,
     gameName: null,
-    gameCreator: false,
+    gameCreator: null,
     gameRelease: null,
     gamePlatform: null,
     gamePrice: null,
-    gameIsFav: null,
+    gameIsFav: false,
   };
 
   constructor(
@@ -34,20 +34,16 @@ export class GameNewPage {
     ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GameNewPage');
-  }
-
   onAdd() {
     this.Game.saveNewGame(this.game).subscribe(() => {
       this.game = {
         gamePicture: null,
         gameName: null,
-        gameCreator: false,
+        gameCreator: null,
         gameRelease: null,
         gamePlatform: null,
         gamePrice: null,
-        gameIsFav: null,
+        gameIsFav: false,
       };
       this.navCtrl.pop();
     });

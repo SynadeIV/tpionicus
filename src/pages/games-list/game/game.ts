@@ -39,7 +39,10 @@ export class GamePage implements OnInit {
     console.log('ionViewDidLoad GamePage');
   }
 
-  onGoAccessModif()
+  /**
+   * 
+   */
+  onGoAccessModif() 
   {
     let alert = this.alertCtrl.create({
       title: "Sur de vouloir modifier ?",

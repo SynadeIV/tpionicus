@@ -14,6 +14,7 @@ import { GameNewPageModule } from '../pages/games-list/game-new/game-new.module'
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { GameProvider } from '../providers/game/game';
+import { PhotoPageModule } from '../pages/photo/photo.module';
 
 const firebase = {
   apiKey: "AIzaSyAnJCscR8eR4H0U7vxHwurFei9DBngDtds",
@@ -25,6 +26,7 @@ const firebase = {
   measurementId: "G-8SDPB0ZNP3"
 };
 
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ const firebase = {
     GameNewPageModule,
     AngularFireModule.initializeApp(firebase),
     AngularFirestoreModule,
-
+    PhotoPageModule,        
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,6 +55,8 @@ const firebase = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameProvider,
+    Camera,
+
   ]
 })
 export class AppModule {}

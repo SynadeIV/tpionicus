@@ -5,13 +5,17 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Creation d'un nouveau jeu</h2>
-  <button ion-button (click)="onGoToCreate()">Création</button>
+  <div text-center class="temadark">
+    <h2>Creation d'un nouveau jeu</h2>
+    <button ion-button (click)="onGoToCreate()">+</button>
+  </div>
+  
+  <hr>
 
   <h2>La liste des jeux</h2>
   <ion-grid>
     <ion-row>
-      <ion-col col-4 *ngFor="let game of games"> <!-- ou size="4"-->
+      <ion-col col-6 *ngFor="let game of games"> <!-- ou size="4"-->
         <ion-list (click)="onGoToGame(game.data.gameName, game.id)">
           <ion-item>
             <img [src]="game.data.gamePicture" [alt]="game.data.gameName">
@@ -26,7 +30,7 @@
 </ion-content>
 
 <ion-footer>
-  <div text-center>
+  <div text-center class="temadark">
     Pas trop marrant
   </div>
 </ion-footer>

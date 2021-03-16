@@ -27,6 +27,7 @@ const firebase = {
 };
 
 import { Camera } from '@ionic-native/camera';
+import { EastereggPageModule } from '../pages/easteregg/easteregg.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { Camera } from '@ionic-native/camera';
     GameNewPageModule,
     AngularFireModule.initializeApp(firebase),
     AngularFirestoreModule,
-    PhotoPageModule,        
+    PhotoPageModule,       
+    EastereggPageModule, 
   ],
   bootstrap: [IonicApp],
   entryComponents: [

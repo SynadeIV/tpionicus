@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EastereggPage } from '../easteregg/easteregg';
 
 /**
- * Generated class for the AboutPage page.
+ * Generated class for the EastereggPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,22 +10,16 @@ import { EastereggPage } from '../easteregg/easteregg';
 
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-easteregg',
+  templateUrl: 'easteregg.html',
 })
-export class AboutPage {
+export class EastereggPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
-  }
-
-  onGoToEaster()
-  {
-    console.log("easteregg");
-    this.navCtrl.push(EastereggPage); 
+    console.log('ionViewDidLoad EastereggPage');
   }
 
 }

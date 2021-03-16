@@ -53,7 +53,7 @@
       <ion-row>
         <ion-col col-6>
           <strong>Favoris:</strong>
-          <ion-icon *ngIf="game.data.gameIsFav" name="checkmark"></ion-icon>
+          <ion-icon *ngIf="game.data.gameIsFav" name="heart"></ion-icon>
           <ion-icon *ngIf="!game.data.gameIsFav" name="close-circle"></ion-icon>
         </ion-col>
         <ion-col col-6>
@@ -68,15 +68,15 @@
         </ion-col>
         <ion-col col-6>
           <strong>Nom :</strong> <br>
-          {{game.data.gameName}} <br>
-          <strong>Créateur :</strong><br>
-          {{game.data.gameCreator}} <br>
+          {{game.data.gameName}} <br> <br>
+          <strong>Créateur :</strong><br> 
+          {{game.data.gameCreator}} <br> <br>
           <strong>Date de sortie :</strong> <br>
-          {{game.data.gameRelease}} <br>
+          {{game.data.gameRelease}} <br> <br>
           <strong>Plateforme :</strong> <br>
-          {{game.data.gamePlatform}} <br>
+          {{game.data.gamePlatform}} <br> <br>
           <strong>Prix :</strong> <br>
-          {{game.data.gamePrice}} <br>
+          {{game.data.gamePrice}} <br> <br>
         </ion-col>
       </ion-row>
     </ion-grid>

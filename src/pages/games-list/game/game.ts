@@ -70,6 +70,7 @@ export class GamePage implements OnInit {
       toast.present();
       this.modif = false;
     })
+    this.navCtrl.pop();
   }
 
   onDelete(){

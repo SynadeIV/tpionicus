@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="onGoAccessModif()">Rendre Modifiable</button>
+  <button ion-button (click)="onGoAccessModif()">Modifier</button>
+  <button ion-button (click)="onDelete()" color="danger">
+    <ion-icon name="trash"></ion-icon>
+  </button>
   <!-- <div *ngIf="!modif">
     J'affiche le détail
   </div>
@@ -56,17 +59,12 @@
           <ion-icon *ngIf="game.data.gameIsFav" name="heart"></ion-icon>
           <ion-icon *ngIf="!game.data.gameIsFav" name="close-circle"></ion-icon>
         </ion-col>
-        <ion-col col-6>
-          <button ion-button (click)="onDelete()">
-            <ion-icon name="trash"></ion-icon>
-          </button>
-        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col col-6>
           <img [src]="game.data.gamePicture" [alt]="game.data.gameName">
         </ion-col>
-        <ion-col col-6>
+        <ion-col col-8>
           <strong>Nom :</strong> <br>
           {{game.data.gameName}} <br> <br>
           <strong>Créateur :</strong><br> 

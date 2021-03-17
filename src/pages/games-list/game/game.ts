@@ -63,11 +63,12 @@ export class GamePage implements OnInit {
   
   onModif() {
     this.Game.update(this.game.data, this.game.id).subscribe(() => {
-      const toast = this.Toast.create({
+      this.Toast.create({
         message: 'Vos changements ont été sauvegardées',
-        duration: 2000
-      })
-      toast.present();
+        duration: 2000,
+        position: 'bottom'
+      }).present();
+      
       this.modif = false;
     })
     this.navCtrl.pop();

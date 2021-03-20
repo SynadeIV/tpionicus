@@ -16,12 +16,12 @@ import { PhotoPage } from '../photo/photo';
   selector: 'page-tab',
   templateUrl: 'tab.html',
 })
-export class TabPage {
+export class TabPage { //page which are link to the bottom navigation
 
   home = HomePage;
-  games = GamesListPage;
+  games = GamesListPage; 
   about = AboutPage;
-  photo = PhotoPage;
+  photo = PhotoPage; 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

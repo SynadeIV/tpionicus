@@ -26,7 +26,7 @@ export class AboutPage {
   onGoToEaster()
   {
     console.log("easteregg");
-    this.navCtrl.push(EastereggPage); 
+    this.navCtrl.push(EastereggPage); //redirect onClick button to easteregg page
   }
 
 }

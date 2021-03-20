@@ -39,14 +39,11 @@ export class GamePage implements OnInit {
     console.log('ionViewDidLoad GamePage');
   }
 
-  /**
-   * 
-   */
-  onGoAccessModif() 
+  onGoAccessModif() // button to be redirect to update page
   {
     let alert = this.alertCtrl.create({
-      title: "Sur de vouloir modifier ?",
-      subTitle: "Vous rendrez possible la modif.",
+      title: "Sur de vouloir modifier ?", 
+      subTitle: "Vous rendrez possible la modif.", 
       buttons: [
         {
           text: "Annler",
@@ -62,7 +59,7 @@ export class GamePage implements OnInit {
   }
   
   onModif() {
-    this.Game.update(this.game.data, this.game.id).subscribe(() => {
+    this.Game.update(this.game.data, this.game.id).subscribe(() => { //update game + bottom toast
       this.Toast.create({
         message: 'Vos changements ont été sauvegardées',
         duration: 2000,

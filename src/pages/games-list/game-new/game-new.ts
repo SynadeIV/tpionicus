@@ -35,7 +35,7 @@ export class GameNewPage {
   }
 
   onAdd() {
-    this.Game.saveNewGame(this.game).subscribe(() => {
+    this.Game.saveNewGame(this.game).subscribe(() => { //new game creation
       this.game = {
         gamePicture: null,
         gameName: null,

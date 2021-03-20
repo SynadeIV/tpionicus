@@ -31,8 +31,8 @@ export class GamesListPage implements OnInit {
   {
 
   }
-  ngOnInit(){
-    this.gameSubscription = this.Game.gameSubject.subscribe((listGame) => {
+  ngOnInit(){ 
+    this.gameSubscription = this.Game.gameSubject.subscribe((listGame) => { //display games list
       this.games = listGame
     })
 
@@ -40,12 +40,12 @@ export class GamesListPage implements OnInit {
 
   onGoToCreate()
   {
-    this.navCtrl.push(GameNewPage); 
+    this.navCtrl.push(GameNewPage); //redirect to gamenewpage
   }
 
   onGoToGame(gameName:string, _id:string)
   {
-    this.navCtrl.push(GamePage, {title: gameName, id: _id}); 
+    this.navCtrl.push(GamePage, {title: gameName, id: _id}); //redirect to game details
   }
 
 }

@@ -1,5 +1,5 @@
 # Readmeplease :
-### Objectif du tp : 👨‍💻
+### 👨‍💻 Objectif du tp : 
   - Réalisation d'une appli sous IONIC(v3) 
   - Gérer un CRUD (ici sur les jeux video)
   - Utilisation d'une fonctionnalité native du téléphone (appareil photo ici pour l'ajout d'image)

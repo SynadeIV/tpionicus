@@ -26,7 +26,8 @@ export class PhotoPage {
     ) {
   }
 
-  onPicture(){
+  onPicture()
+  {
     this.Camera.getPicture(this.options)
       .then((data) => {
         if(data) this.imgUrl = normalizeURL(data);

@@ -14,8 +14,9 @@ import { GameProvider } from '../../../providers/game/game';
   selector: 'page-game-new',
   templateUrl: 'game-new.html',
 })
-export class GameNewPage {
 
+export class GameNewPage 
+{
   public game: any = {
     gamePicture: null,
     gameName: null,
@@ -30,11 +31,10 @@ export class GameNewPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public Game: GameProvider,
+    ) {}
 
-    ) {
-  }
-
-  onAdd() {
+  onAdd() 
+  {
     this.Game.saveNewGame(this.game).subscribe(() => { //new game creation
       this.game = {
         gamePicture: null,

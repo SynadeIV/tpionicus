@@ -26,16 +26,14 @@ export class GamesListPage implements OnInit {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public Game: GameProvider,
-
   ) 
-  {
+  {}
 
-  }
-  ngOnInit(){ 
+  ngOnInit()
+  { 
     this.gameSubscription = this.Game.gameSubject.subscribe((listGame) => { //display games list
       this.games = listGame
     })
-
   }
 
   onGoToCreate()

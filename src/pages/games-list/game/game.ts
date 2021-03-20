@@ -29,14 +29,11 @@ export class GamePage implements OnInit {
     private Toast: ToastController,
     ) {}
 
-  ngOnInit(){
+  ngOnInit()
+  {
     this.name = this.navParams.get('name');
     this.id = this.navParams.get('id');
     this.game = this.Game.getGameById(this.id);
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GamePage');
   }
 
   onGoAccessModif() // button to be redirect to update page
@@ -58,7 +55,8 @@ export class GamePage implements OnInit {
     alert.present();
   }
   
-  onModif() {
+  onModif() 
+  {
     this.Game.update(this.game.data, this.game.id).subscribe(() => { //update game + bottom toast
       this.Toast.create({
         message: 'Vos changements ont été sauvegardées',
@@ -71,7 +69,8 @@ export class GamePage implements OnInit {
     this.navCtrl.pop();
   }
 
-  onDelete(){
+  onDelete()
+  {
     this.Game.delete(this.id);
     this.navCtrl.pop();
   }

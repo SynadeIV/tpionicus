@@ -23,11 +23,10 @@ export class TabPage { //page which are link to the bottom navigation
   about = AboutPage;
   photo = PhotoPage; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TabPage');
-  }
-
+  constructor
+  (
+    public navCtrl: NavController, 
+    public navParams: NavParams
+  ) 
+    {}
 }
